@@ -20,10 +20,10 @@ class PedidoFactory extends Factory
 
             'id_tipo_pedido' => '1',
             'id_user' => fake()->numberBetween(1,21),
-            'cliente' => fake()->numberBetween(1,50),
+            'id_cliente' => fake()->numberBetween(1,50),
             'cliente_endereco' => fake()->numberBetween(1,50),
-            'status' => '1',
-            'tipo_pagamento' => '1',
+            'id_status' => '1',
+            'id_tipo_pagamento' => '1',
             'total' => fake()->numberBetween(50,200),
             'observacoes' => fake()->paragraph(),
 
