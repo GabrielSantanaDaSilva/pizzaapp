@@ -1,8 +1,16 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\{
+                        CargoController,
+                        ClienteController,
+                        EnderecoController,
+                        PedidoController,
+                        ProdutoController,
+                        ProdutoTamanhoController,
+                        ProfileController,
 
+};
 /*
 |--------------------------------------------------------------------------
 | Web Routes
