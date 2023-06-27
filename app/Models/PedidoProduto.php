@@ -42,6 +42,8 @@ class PedidoProduto extends Model
         'subtotal',
         'observacoes',
 
+        //oioi
+
 
     ];
 
