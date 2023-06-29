@@ -19,7 +19,9 @@ class CargoController extends Controller
      */
     public function index()
     {
-        $cargos = Cargo::orderBy('cargo');
+        $cargos = Cargo::orderBy('cargo')
+                                ->get();
+        
         return view('cargo.index')
         ->with(compact('cargos'));
     }

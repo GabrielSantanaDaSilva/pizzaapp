@@ -54,7 +54,7 @@ Route::prefix('cargos')
                 Route::get('/{id}','show')
                         ->name('cargo.show');
 
-                Route::get('/editar{id}','editar')
+                Route::get('/editar{id}','edit')
                         ->name('cargo.edit');
 
                 Route::post('/store','store')
