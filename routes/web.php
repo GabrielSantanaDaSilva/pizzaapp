@@ -54,7 +54,7 @@ Route::prefix('cargos')
                 Route::get('/{id}','show')
                         ->name('cargo.show');
 
-                Route::get('/editar{id}','edit')
+                Route::get('/editar/{id}','edit')
                         ->name('cargo.edit');
 
                 Route::post('/store','store')
@@ -88,7 +88,7 @@ Route::prefix('clientes')
     Route::get('/{id}','show')
             ->name('cliente.show');
 
-    Route::get('/editar{id}','editar')
+    Route::get('/editar/{id}','editar')
             ->name('cliente.edit');
 
     Route::post('/store','store')
@@ -122,7 +122,7 @@ Route::prefix('clientes')
      Route::get('/{id}','show')
              ->name('endereco.show');
 
-     Route::get('/editar{id}','editar')
+     Route::get('/editar/{id}','editar')
              ->name('endereco.edit');
 
      Route::post('/store','store')
@@ -156,7 +156,7 @@ Route::prefix('pedidos')
     Route::get('/{id}','show')
             ->name('pedido.show');
 
-    Route::get('/editar{id}','editar')
+    Route::get('/editar/{id}','editar')
             ->name('pedido.edit');
 
     Route::post('/store','store')
@@ -190,7 +190,7 @@ Route::prefix('pedidos')
      Route::get('/{id}','show')
              ->name('produto.show');
 
-     Route::get('/editar{id}','editar')
+     Route::get('/editar/{id}','editar')
              ->name('produto.edit');
 
      Route::post('/store','store')
@@ -223,7 +223,7 @@ Route::prefix('pedidos')
      Route::get('/{id}','show')
              ->name('tamanho.show');
 
-     Route::get('/editar{id}','editar')
+     Route::get('/editar/{id}','editar')
              ->name('tamanho.edit');
 
      Route::post('/store','store')

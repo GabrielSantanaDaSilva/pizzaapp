@@ -21,7 +21,7 @@ class CargoController extends Controller
     {
         $cargos = Cargo::orderBy('cargo')
                                 ->get();
-        
+
         return view('cargo.index')
         ->with(compact('cargos'));
     }
@@ -48,7 +48,7 @@ class CargoController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Integer $id)
+    public function show(int $id)
     {
         $cargo = Cargo::find($id);
         return view('cargo.show')
