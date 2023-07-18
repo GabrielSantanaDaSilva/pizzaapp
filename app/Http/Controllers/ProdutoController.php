@@ -64,7 +64,7 @@ class ProdutoController extends Controller
         $produto = Produto::find($id);
         $produto->update($request->all());
         return redirect()->route('produto.show',['id' => $produto->id_produto])
-                                                        ->with('success','atualizado com sucesso')
+                                                        ->with('success','atualizado com sucesso');
     }
 
     /**
@@ -74,7 +74,7 @@ class ProdutoController extends Controller
     {
 
         produto::find($id)->delete();
-        return redirect()->back()->with('danger','removido com sucesso')
+        return redirect()->back()->with('danger','removido com sucesso');
 
     }
 
@@ -83,7 +83,7 @@ class ProdutoController extends Controller
     // tamanhos dos produtos
 
     public function createTamanho(int $id_produto) {
-        $produtoTamanho = null
+        $produtoTamanho = null;
         $produto = Produto::find($id_produto);
         $tamanhos = ProdutoTamanho::class;
 
@@ -106,7 +106,7 @@ class ProdutoController extends Controller
 
         return  redirect()
                 ->route('produto.show', ['id' => $id_produto])
-                ->with('success','tamanho cadastrado com sucesso')
+                ->with('success','tamanho cadastrado com sucesso');
     }
 
     public function editTamanho(int $id)
@@ -134,7 +134,7 @@ class ProdutoController extends Controller
 
         ProdutoTamanho::find($id)->delete();
         return redirect()->back()->with('danger','Excluido com sucesso');
-        
+
 
     }
 }
