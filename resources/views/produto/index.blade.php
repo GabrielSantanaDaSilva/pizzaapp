@@ -20,9 +20,9 @@
                     <a class="btn btn-secondary" href="{{ route('cargo.edit', ['id'=>$cargo->id_cargo]) }}">
                         Editar
                     </a>
-                    <a href="{{ route('cargo.show', ['id'=>$cargo->id_cargo]) }}">
+                    <a class="btn btn-primary" href="{{ route('cargo.show', ['id'=>$cargo->id_cargo]) }}">
                         Ver</a>
-                    <a href="{{ route('cargo.destroy', ['id'=>$cargo->id_cargo]) }}">
+                    <a class="btn btn-success" href="{{ route('cargo.destroy', ['id'=>$cargo->id_cargo]) }}">
                         Excluir
                     </a>
                 </td>

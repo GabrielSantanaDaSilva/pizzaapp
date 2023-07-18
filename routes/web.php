@@ -193,6 +193,12 @@ Route::prefix('pedidos')
      Route::get('/editar/{id}','editar')
              ->name('produto.edit');
 
+     Route::get('/tamanho/{id_produto}', 'createTamanho')
+            ->name('produto.createTamanho');
+
+     Route::get('/tamanho/editar/{id}', 'editTamanho')
+            ->name('produto.editTamanho');
+
      Route::post('/store','store')
              ->name('produto.store');
 
@@ -201,6 +207,15 @@ Route::prefix('pedidos')
 
      Route::post('/destroy','destroy')
              ->name('produto.destroy');
+
+     Route::post('/tamanho/store/{id_produto}', 'storeTamanho')
+            ->name('produto.storeTamanho');
+
+     Route::post('/tamanho/update','updateTamanho')
+            ->name('produto.updateTamanho');
+
+     Route::post('/tamanho/destroy', 'destroyTamanho')
+            ->name('produto.destroyTamanho');
 
 
  });
