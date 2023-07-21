@@ -35,7 +35,7 @@ class Produto extends Model
 
     // Relacionamentos
 
-   public function usuarios() : object {
+   public function tipo() : object {
             return $this->hasOne(TipoProduto::class,
                                     'id_tipo_produto',
                                     'id_tipo_produto');

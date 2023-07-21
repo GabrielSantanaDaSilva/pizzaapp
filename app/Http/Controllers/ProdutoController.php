@@ -85,16 +85,18 @@ class ProdutoController extends Controller
     public function createTamanho(int $id_produto) {
         $produtoTamanho = null;
         $produto = Produto::find($id_produto);
-        $tamanhos = ProdutoTamanho::class;
+        $tamanhos = Tamanho::class;
 
         return view('produto.formTamanho')
-                ->with(compact('produto','tamanhos'));
+                ->with(compact('produto','tamanhos','produtoTamanho'));
 
 
     }
 
     public function storeTamanho(Request $request, int $id_produto)
     {
+            dd($id_produto);
+            dd($request);
         $produtoTamanho = ProdutoTamanho::create([
 
                 'id_produto' => $id_produto,
@@ -123,8 +125,8 @@ class ProdutoController extends Controller
     }
 
     public function updateTamanho(Request $request, int $id){
-        $produtoTamanho = ProdutoTamano::find($id);
-        $produto->update($request->all());
+        $produtoTamanho = ProdutoTamanho::find($id);
+        $produtoTamanho->update($request->all());
 
         return redirect()->route('produto.show',['id' => $produtoTamanho->id_produto])
         ->with('success', 'Atualizado com sucesso');
